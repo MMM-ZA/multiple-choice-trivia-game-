@@ -18,8 +18,16 @@ body {
   background-color: #4158D0;
   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
   display: flex;
-}
+  /* justify-content: center; */
 
+
+}
+.page-header h1{
+  align-self:baseline;
+}
+.score-wrapper {
+align-self:flex-start;
+}
 .page-body{
 display: flex;
 justify-content: center;
@@ -44,16 +52,8 @@ flex-direction: row;
   text-align: center;
   padding: 5px;
   margin: 10px;
-  font-size: 14px;
+  font-size: 16px;
 
-}
-/* // */
-.correct-answer {
-  background-color: #f18760;
-}
-
-.wrong-answer {
-  background-color: #c73b1e;
 }
 
 .true-button {
@@ -66,4 +66,11 @@ flex-direction: row;
 
 button {
   margin: 5px;
+}
+.correct-answer {
+  background-color: #f18760;
+}
+
+.wrong-answer {
+  background-color: #c73b1e;
 }
