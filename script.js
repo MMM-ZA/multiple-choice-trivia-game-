@@ -2,6 +2,8 @@ const trivia = document.getElementById('app')
 const scoreDisplay = document.getElementById('score')
 
 
+
+
 let score = 0
 
 const genres = [
@@ -31,10 +33,12 @@ function addGenre(genre) {
     column.innerHTML = genre.name
     trivia.append(column)
 
+
     levels.forEach(level => {
         const card = document.createElement('div')
         card.classList.add('card')
         column.append(card)
+
 
         if (level === 'easy') {
             card.innerHTML = 100
@@ -86,7 +90,7 @@ function showResult(){
   if (cardOfButton.getAttribute('data-answer') === this.innerHTML) {
     score = score + parseInt(cardOfButton.getAttribute('data-value'))
     scoreDisplay.innerHTML = score
-    cardOfButton.classList.add('correct-answer')
+    cardOfButton.classList.add('correct')
     setTimeout(() => {
             while (cardOfButton.firstChild) {
                 cardOfButton.removeChild(cardOfButton.lastChild)
@@ -95,7 +99,7 @@ function showResult(){
         }, 100)
     }
   else {
-    cardOfButton.classList.add('wrong-answer')
+    cardOfButton.classList.add('incorrect')
   }
       cardOfButton.removeEventListener('click',flipCard)
   }
